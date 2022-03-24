@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="PerceptronWithActivationFunction">
+      <HintPath>..\..\..\..\..\Desktop\PerceptronWithActivationFunction\PerceptronWithActivationFunction\PerceptronWithActivationFunction\bin\Debug\netstandard2.1\PerceptronWithActivationFunction.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
