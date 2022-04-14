@@ -20,7 +20,7 @@ namespace ANDGateWithActivationFunction
 
         public static double BinaryStep(double input)
         {
-            if (input > 0)
+            if (input >= 0)
             {
                 return 1;
             }
@@ -36,7 +36,7 @@ namespace ANDGateWithActivationFunction
             Random random = new Random();
 
             //creating a perceptron
-            Perceptron gate = new Perceptron(2, 0.001, random, MeanSquaredError, new ActivationFunction(BinaryStep, x => 0));
+            Perceptron gate = new Perceptron(amountOfInputs: 2, mutationAmount: 1, random, MeanSquaredError, new ActivationFunction(BinaryStep, derivative: x => 0));
 
             //Setting random values for our weights and bias
             gate.Randomize(random, -1, 1);
@@ -73,7 +73,21 @@ namespace ANDGateWithActivationFunction
             Console.WriteLine("Final Error: " + Math.Round(currentError, 3) + "");
             currentError = gate.TrainWithHillClimbing(inputs, outputs, currentError);
 
-            Console.WriteLine(gate.Compute(inputs));
+            //for (int i = 0; i < inputs.Length; i++)
+            //{
+            //    Console.Write("Inputs: ");
+            //    for (int j = 0; j < inputs[i].Length; j++)
+            //    {
+            //        if (j != 0)
+            //        {
+            //            Console.Write(", ");
+            //        }
+            //        Console.Write(inputs[i][j]);
+            //    }
+
+            //    Console.Write(" Output: " + gate.Compute(inputs[i]) + "             ");
+            //    Console.WriteLine();
+            //}
             Console.WriteLine("Complete");
             //write the four test cases and train perceptron until it's right
         }

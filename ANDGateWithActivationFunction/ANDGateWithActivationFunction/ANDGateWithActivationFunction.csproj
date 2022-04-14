@@ -6,9 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="PerceptronWithActivationFunction">
-      <HintPath>..\..\..\..\..\Desktop\PerceptronWithActivationFunction\PerceptronWithActivationFunction\PerceptronWithActivationFunction\bin\Debug\netstandard2.1\PerceptronWithActivationFunction.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\..\PerceptronWithActivationFunction\PerceptronWithActivationFunction\PerceptronWithActivationFunction\PerceptronWithActivationFunction.csproj" />
   </ItemGroup>
 
 </Project>
